@@ -33,13 +33,14 @@ public class DoubleLinkedList<K,V> {
         addToFront(node);
    }
 
-   public void removeLast(){
+   public Node<K,V> removeLast(){
        if(head.right == tail){
-           return;
+           return null;
        }
 
+       Node<K,V> last = tail.left;
        remove(tail.left);
-
+       return last;
    }
 
 

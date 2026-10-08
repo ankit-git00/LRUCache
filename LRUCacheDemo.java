@@ -1,3 +1,4 @@
+package lruCache;
 
 public class LRUCacheDemo {
     public static void main(String[] args) {
@@ -8,10 +9,13 @@ public class LRUCacheDemo {
         cache.put("c", 3);
 
         System.out.println(cache.get("a"));
+        System.out.println(cache.get("b"));
 
         cache.put("d", 4);
 
-        System.out.println(cache.get("b");
+        System.out.println(cache.get("c"));
+        cache.remove("a");
+        System.out.println(cache.get("a"));
 
     }
 }
